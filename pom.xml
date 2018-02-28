@@ -14,13 +14,6 @@
     <sonar.password>password</sonar.password>
   </properties>
 	
-	<servers>
-    <server>
-        <id>release</id>
-        <username>deploy</username>
-        <password>deploy</password>
-    </server>
-</servers>
 	
 	<distributionManagement>
   <repository>
