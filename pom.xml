@@ -12,6 +12,8 @@
     <sonar.language>java</sonar.language>
     <sonar.login>admin</sonar.login>
     <sonar.password>password</sonar.password>
+   <artifact.login>deploy</artifact.login>
+    <artifact.password>deploy</artifact.password>
   </properties>
 	<distributionManagement>
   <repository>
