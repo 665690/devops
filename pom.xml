@@ -14,6 +14,26 @@
     <sonar.password>password</sonar.password>
   </properties>
 	
+	
+	<distributionManagement>
+  <repository>
+    <id>release</id>
+    <name>releases</name>
+    <url>https://artifact.jfrog.io/artifact/libs-release-local</url>
+  </repository>
+  <snapshotRepository>
+    <id>snapshot</id>
+    <name>snapshots</name>
+    <url>https://artifact.jfrog.io/artifact/libs-snapshot-local/</url>
+  </snapshotRepository>
+</distributionManagement>
+
+<scm>
+  <connection>scm:git:git@github.com:deraviyam/devops.git</connection>
+  <developerConnection>scm:git:git@github.com:deraviyam/devops.git</developerConnection>
+  <url>git@github.com:deraviyam/devops.git</url>
+  <tag>HEAD</tag>
+</scm>
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -55,6 +75,10 @@
 			<artifactId>mockito-all</artifactId>
 			<version>1.9.5</version>
 		</dependency>
+		
+		
+		
+		
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -77,6 +101,21 @@
 				</configuration>
 				</plugin>
 				
-		</plugins>
+		<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-release-plugin</artifactId>
+  <version>2.5.1</version>
+  <configuration>
+    <tagNameFormat>v@{project.version}</tagNameFormat>
+    <autoVersionSubmodules>true</autoVersionSubmodules>
+  </configuration>
+</plugin>
+			
+
+			
+				
+			
+			
+</plugins>
 	</build>
 </project>
