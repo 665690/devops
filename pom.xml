@@ -12,9 +12,16 @@
     <sonar.language>java</sonar.language>
     <sonar.login>admin</sonar.login>
     <sonar.password>password</sonar.password>
-   <artifact.login>deploy</artifact.login>
-    <artifact.password>deploy</artifact.password>
   </properties>
+	
+	<servers>
+    <server>
+        <id>release</id>
+        <username>deploy</username>
+        <password>deploy</password>
+    </server>
+</servers>
+	
 	<distributionManagement>
   <repository>
     <id>release</id>
